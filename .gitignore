@@ -1,64 +1,41 @@
-Last login: Fri May 27 19:12:29 on ttys000
-Matheus-Alves-Pro:~ MatheusAlves$ cd workspace/
-Matheus-Alves-Pro:workspace MatheusAlves$ 
-Display all 1600 possibilities? (y or n)
-Matheus-Alves-Pro:workspace MatheusAlves$ ls -la
-total 0
-drwxr-xr-x   3 MatheusAlves  staff   102 27 Mai 19:44 .
-drwxr-xr-x+ 69 MatheusAlves  staff  2346 27 Mai 19:44 ..
-drwxr-xr-x   4 MatheusAlves  staff   136 27 Mai 19:45 Celti-web
-Matheus-Alves-Pro:workspace MatheusAlves$ cd Celti-web/
-Matheus-Alves-Pro:Celti-web MatheusAlves$ git init
-Initialized empty Git repository in /Users/MatheusAlves/workspace/Celti-web/.git/
-Matheus-Alves-Pro:Celti-web MatheusAlves$ clear
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
 
+# Eclipse Core
+.project
 
+# External tool builders
+.externalToolBuilders/
 
+# Locally stored "Eclipse launch configurations"
+*.launch
 
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
 
+# CDT-specific (C/C++ Development Tooling)
+.cproject
 
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
 
+# Java annotation processor (APT)
+.factorypath
 
-
-
-Matheus-Alves-Pro:Celti-web MatheusAlves$ cd 
-.git/       documentos/ webproject/ 
-Matheus-Alves-Pro:Celti-web MatheusAlves$ cd webproject/
-Matheus-Alves-Pro:webproject MatheusAlves$ nano .gitignore
-Matheus-Alves-Pro:webproject MatheusAlves$ nano .gitignore
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  GNU nano 2.0.6              File: .gitignore                                  
+# PDT-specific (PHP Development Tools)
+.buildpath
 
 # sbteclipse plugin
 .target
 
 # Tern plugin
 .tern-project
-
-# TeXlipse plugin
-.texlipse
-
-# STS (Spring Tool Suite)
-.springBeans
-
-# Code Recommenders
-.recommenders/
-
