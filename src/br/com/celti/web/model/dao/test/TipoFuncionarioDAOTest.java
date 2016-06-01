@@ -48,8 +48,8 @@ public class TipoFuncionarioDAOTest {
 
 	@Test
 	public void testConsultar() {
-		fail("Not yet implemented");
-/*
+//		fail("Not yet implemented");
+
 		EntityManager entitymanager = JPAUtil.getEntityManager();
 		TipoFuncionarioDAO tfDAO = new TipoFuncionarioDAO(entitymanager);
 		
@@ -60,8 +60,7 @@ public class TipoFuncionarioDAOTest {
 		entitymanager.getTransaction().commit();
 		//entitymanager.close();
 		
-		Assert.assertNotNull(tf.getDescricao());
-		System.out.println(tf.getDescricao());*/
+		System.out.println(tf.getDescricao());
 		
 	}
 
@@ -80,8 +79,7 @@ public class TipoFuncionarioDAOTest {
 		
 		//Assert.assertNotNull(tf.getDescricao());
 		for (TipoFuncionario tf : ltf) {
-			Assert.assertNotNull(tf.getDescricao());
-			System.out.println(tf.getDescricao());
+			System.out.println(tf.getId());
 		}
 	}
 
