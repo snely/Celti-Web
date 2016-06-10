@@ -3,6 +3,8 @@ package br.com.celti.web.model.bean;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 @Entity(name = "tipo_funcionario")

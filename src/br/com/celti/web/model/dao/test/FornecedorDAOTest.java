@@ -26,7 +26,7 @@ public class FornecedorDAOTest {
 		Fornecedor tf = new Fornecedor();
 				
 		tf.setCnpj("123");//TROCAR SEMPRE QUE COMPILAR O JUNIT
-		tf.setNome("Matheus");
+		tf.setNome("Fornecedor Fulano");
 		tf.setContato("contato");
 		tf.setEndereco("endereco");
 		
