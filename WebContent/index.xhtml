@@ -3,27 +3,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
-	<h:head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>.::Acesso Celti Web::.</title>
-	</h:head>
-	<h:body>
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>.::Acesso Celti Web::.</title>
+	<h:outputStylesheet name="index.css" library="css" />
+</h:head>
+<h:body>
+
+	<h:panelGrid id="content">
+		<f:facet name="header">
+			<h:graphicImage library="images" name="logo.png" styleClass="logo" />
+			<br />
+			<h:outputText value="Celti - Controle de Estoque de loja de TI"
+				styleClass="title" />
+		</f:facet>
 
 		<h:form>
-			<h3>Acesso ao Celti-Web</h3>
-			<h:outputText value="Login" />
-			<h:inputText id="login" value="#{loginController.login}"></h:inputText>
+			<h:outputText value="Login" styleClass="label" />
+			<br />
+			<h:inputText id="login" value="#{loginController.login}"
+				styleClass="field"></h:inputText>
 			<h:message for="login"></h:message>
-			<br></br><br></br>
-			
-			<h:outputText value="Senha" />
-			<h:inputSecret id="senha" value="#{loginController.senha}"></h:inputSecret>
+			<br />
+			<h:outputText value="Senha" styleClass="label" />
+			<br />
+			<h:inputSecret id="senha" value="#{loginController.senha}"
+				styleClass="field"></h:inputSecret>
 			<h:message for="senha"></h:message>
-			<br></br><br></br>
-			
+			<br />
 			<h:commandButton action="#{loginController.validarLogin}"
-				value="Login"></h:commandButton>
+				value="Login" styleClass="sendButton"></h:commandButton>
 		</h:form>
+	</h:panelGrid>
 
-	</h:body>
+</h:body>
 </html>
