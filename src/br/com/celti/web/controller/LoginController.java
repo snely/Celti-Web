@@ -56,10 +56,10 @@ public class LoginController implements Serializable {
 		FuncionarioDAO fDAO = new FuncionarioDAO(entitymanager);
 		entitymanager.getTransaction().begin();
 		
-		Funcionario func = fDAO.validar(login, senha);
+		this.user = fDAO.validar(login, senha);
 		entitymanager.getTransaction().commit();
 		
-		if (func != null) {
+		if (this.user != null) {
 			HttpSession session = SessionUtils.getSession();
 			session.setAttribute("user", user);
 			return "logado";
@@ -77,7 +77,7 @@ public class LoginController implements Serializable {
 	public String logout() {
 		HttpSession session = SessionUtils.getSession();
 		session.invalidate();
-		return "login";
+		return "nlogado";
 	}
 
 }

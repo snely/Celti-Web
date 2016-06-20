@@ -10,7 +10,7 @@
 	<h:body>
 	
 		<h:form>
-			<p>Welcome #{loginController.user.nome}</p>
+			<h:outputText value="Welcome #{loginController.user.nome}" /> <br/>
 			<h:commandLink action="#{loginController.logout}" value="Logout"></h:commandLink>
 		</h:form>
 
