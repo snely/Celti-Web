@@ -9,6 +9,7 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 
 import br.com.celti.web.model.bean.Funcionario;
 import br.com.celti.web.model.dao.FuncionarioDAO;
@@ -24,7 +25,24 @@ public class LoginController implements Serializable {
 	private String login;
 	private String senha;
 	private Funcionario user;
+	
+	private boolean logado = false;
 
+	public LoginController() {
+		HttpSession hs = SessionUtils.getSession();
+		Funcionario f = SessionUtils.getFuncionarioUser();
+		
+		System.out.println(hs);
+		System.out.println(f);
+		this.logado = (hs != null && f != null) ? true : false;
+		
+		if (this.logado) {
+			FacesContext.getCurrentInstance().getExternalContext().encodeActionURL("logado");
+		} else {
+			FacesContext.getCurrentInstance().getExternalContext().encodeActionURL("nlogado");
+		}
+	}
+	
 	public String getLogin() {
 		return login;
 	}
@@ -69,6 +87,7 @@ public class LoginController implements Serializable {
 					new FacesMessage(FacesMessage.SEVERITY_WARN,
 							"Incorrect Username and Passowrd",
 							"Please enter correct username and Password"));
+			JOptionPane.showMessageDialog(null, "Login ou senha estão incorretos. Tente novamente!");
 			return "nlogado";
 		}
 	}

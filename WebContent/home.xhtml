@@ -9,10 +9,19 @@
 	</h:head>
 	<h:body>
 	
-		<h:form>
-			<h:outputText value="Welcome #{loginController.user.nome}" /> <br/>
-			<h:commandLink action="#{loginController.logout}" value="Logout"></h:commandLink>
-		</h:form>
+		<table border="1" width="960px">
+			<tr>
+				<td>
+					<h:form>
+						<h:outputText value="Welcome #{loginController.user.nome}" />
+						<h:commandLink action="#{loginController.logout}" value="Logout"></h:commandLink>
+					</h:form>
+				</td>
+			</tr>
+		
+		</table>
+	
+		
 
 	</h:body>
 </html>
