@@ -5,9 +5,25 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 	<h:head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Insert title here</title>
-	</h:head>
+		<title>.::Acesso Celti Web::.</title>
+	</h:head
 	<h:body>
-		<h:outputText value="dddd" />
+
+		<h:form>
+			<h3>Acesso ao Celti-Web</h3>
+			<h:outputText value="Login" />
+			<h:inputText id="login" value="#{loginController.login}"></h:inputText>
+			<h:message for="login"></h:message>
+			<br></br><br></br>
+			
+			<h:outputText value="Senha" />
+			<h:inputSecret id="senha" value="#{loginController.senha}"></h:inputSecret>
+			<h:message for="senha"></h:message>
+			<br></br><br></br>
+			
+			<h:commandButton action="#{loginController.validarLogin}"
+				value="Login"></h:commandButton>
+		</h:form>
+
 	</h:body>
 </html>
