@@ -9,7 +9,10 @@
 </h:head>
 <h:body>
 
-	<h:panelGrid id="content" columns="2">
+	<h:panelGrid id="content" columns="3">
+		<h:form>
+			<h:commandLink action="#{menuPrincipalController.abrirPrincipal}" value="Voltar" styleClass="homeButton"></h:commandLink>
+		</h:form>
 		<h:outputText value="Bem-vindo, Sr(a). #{loginController.user.nome}" styleClass="apresentacao" />
 		<h:form>
 			<h:commandLink action="#{loginController.logout}" value="Logout" styleClass="logoutButton"></h:commandLink>

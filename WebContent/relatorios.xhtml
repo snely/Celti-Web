@@ -7,19 +7,11 @@
 	<h:head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Bem-vindo ao Celti Web</title>
-		<h:outputStylesheet name="home.css" library="css" />
 	</h:head>
 	<h:body>
         <ui:include src="header.xhtml" />
 		
-		<h:panelGrid id="menu_principal" columns="5">
-		<f:facet name="header">
-    		<h:outputText styleClass="title" value="O que quer fazer ?"/>
-		</f:facet>
-		<h:form>
-			<h:commandButton styleClass="menu_item" value="Relatórios de entrada e saida." action="#{menuPrincipalController.abrirTelaRelatorios}"></h:commandButton>
-		</h:form>
-		</h:panelGrid>
+		
 	
 	
 	</h:body>
