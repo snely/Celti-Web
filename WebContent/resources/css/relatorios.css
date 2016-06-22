@@ -1,0 +1,89 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#contentRel {
+	text-align: center;
+	
+	margin: 16px auto;
+}
+
+#contentRel .title{
+	font-family: Verdana;
+	font-size: 16px;
+	color: #3d3d3d;
+	
+	margin-right: 8px;
+}
+
+#contentRel .field {
+	color: #3d3d3d;
+	font-size: 16px;
+	font-family: Verdana;
+	
+	width: 120px;
+	height: 25px;
+	margin-bottom: 16px;
+	margin-right: 8px;
+	padding: 4px;
+	
+	outline: none;
+	
+	border-radius: 8px;
+	border: 1px solid black;
+	
+}
+
+#contentRel .buttonGerar {
+	
+	width: 140px;
+	height: 30px;
+	
+	color: black;
+	font-family: Verdana;
+	font-size: 14px;
+	
+	background-color: #cac4b1;
+	border: 1px solid black;
+	border-radius: 6px;
+	
+	cursor: pointer;
+}
+
+#contentRel .buttonGerar:hover{
+	background-color: #dbd5c2;
+	
+	color: white;
+}
+
+.tableInfo {
+	width: 960px;
+	text-align: center;
+	
+	margin: 16px auto;
+	background: #cac4b1;
+}
+
+.header-info {
+	background: #dbd5c2;
+	
+	color: #3d3d3d;
+	font-family: Verdana;
+	font-size: 16px;
+	
+	padding: 6px;
+}
+
+.cell-info {
+	
+	background: #b9b3a0;
+	
+	color: #4e4e4e;
+	font-family: Verdana;
+	font-size: 14px;
+	
+	padding: 8px;
+}

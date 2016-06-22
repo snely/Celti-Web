@@ -7,23 +7,24 @@
 	<h:head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Bem-vindo ao Celti Web</title>
+		<h:outputStylesheet name="relatorios.css" library="css" />
 	</h:head>
 	<h:body>
         <ui:include src="header.xhtml" />
 		
-		<h:panelGrid>
+		<h:panelGrid id="contentRel">
 			<f:facet name="header">
-				<h:outputText value="Selecione a data inicial: " styleClass="title" />
+				<h:outputText value="Data inicial: " styleClass="title" />
 				<h:inputText id="dataI" value="#{relatorioController.dataInicial}" styleClass="field"></h:inputText>
-				<h:outputText value="Selecione a data final: " styleClass="title" />
+				<h:outputText value="Data final: " styleClass="title" />
 				<h:inputText id="dataF" value="#{relatorioController.dataFinal}" styleClass="field"></h:inputText>
 				<h:form>
-					<h:commandButton value="Gerar" action="#{relatorioController.mostrarRelatorio}" />
+					<h:commandButton styleClass="buttonGerar" value="Gerar" action="#{relatorioController.mostrarRelatorio}" />
 				</h:form>
 			</f:facet>
 			
 			<h:form>
-			<h:dataTable border="1" value="#{relatorioController.listaCompra}" var="compra">
+			<h:dataTable value="#{relatorioController.listaCompra}" var="compra" columnClasses="cell-info, cell-info, cell-info, cell-info, cell-info" headerClass="header-info" styleClass="tableInfo">
 				<h:column>
 					<f:facet name="header">
 						<h:outputText  value="Data"/>
