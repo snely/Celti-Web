@@ -25,12 +25,12 @@ public class CompraEstoque {
 	
 	private Integer qtde;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="produto_idproduto")
 	@ForeignKey(name="idproduto")
 	private Produto produto;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="funcionario_idfuncionario")
 	@ForeignKey(name="idfuncionario") 
 	private Funcionario funcionario;

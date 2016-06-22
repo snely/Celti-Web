@@ -17,7 +17,7 @@ import br.com.celti.web.model.dao.JPAUtil;
 import br.com.celti.web.model.dao.ProdutoDAO;
 
 public class CompraEstoqueDAOTest {
-
+/*
 	@Test
 	public void testCadastrar() {
 
@@ -45,7 +45,8 @@ public class CompraEstoqueDAOTest {
 		entitymanager.close();
 		
 	}
-
+*/
+	/*
 	@Test
 	public void testListar() {
 		
@@ -66,6 +67,27 @@ public class CompraEstoqueDAOTest {
 			System.out.println(ce.getData());
 		}
 		
-	}
+	}*/
 
+	@Test
+	public void testListarPorPeriodo() {
+		
+		EntityManager entitymanager = JPAUtil.getEntityManager();
+		CompraEstoqueDAO ceDAO = new CompraEstoqueDAO(entitymanager);
+		
+		entitymanager.getTransaction().begin();
+		
+		List<CompraEstoque> lce = ceDAO.listarPorPeriodo("21/06/2016", "22/06/2016");
+		
+		entitymanager.getTransaction().commit();
+		//entitymanager.close();
+		
+		for (CompraEstoque ce : lce) {
+			System.out.println(ce.getFuncionario().getNome());
+			System.out.println(ce.getProduto().getNome());
+			System.out.println(ce.getQtde());
+			System.out.println(ce.getData());
+		}
+		
+	}
 }

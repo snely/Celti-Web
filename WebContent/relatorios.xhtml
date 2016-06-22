@@ -14,11 +14,11 @@
 		
 		<h:panelGrid id="contentRel">
 			<f:facet name="header">
-				<h:outputText value="Data inicial: " styleClass="title" />
-				<h:inputText id="dataI" value="#{relatorioController.dataInicial}" styleClass="field"></h:inputText>
-				<h:outputText value="Data final: " styleClass="title" />
-				<h:inputText id="dataF" value="#{relatorioController.dataFinal}" styleClass="field"></h:inputText>
 				<h:form>
+					<h:outputText value="Data inicial: " styleClass="title" />
+					<h:inputText id="dataI" value="#{relatorioController.dataInicial}" styleClass="field"></h:inputText>
+					<h:outputText value="Data final: " styleClass="title" />
+					<h:inputText id="dataF" value="#{relatorioController.dataFinal}" styleClass="field"></h:inputText>
 					<h:commandButton styleClass="buttonGerar" value="Gerar" action="#{relatorioController.mostrarRelatorio}" />
 				</h:form>
 			</f:facet>

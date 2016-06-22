@@ -19,8 +19,8 @@ public class RelatorioController implements Serializable {
 
 	private static final long serialVersionUID = 8507347673961821362L;
 
-	private String dataInicial;
-	private String dataFinal;
+	private String dataInicial = "21/06/2016";
+	private String dataFinal = "22/06/2016";
 	
 	private List<CompraEstoque> listaCompra = new ArrayList<CompraEstoque>();
 	
@@ -52,15 +52,17 @@ public class RelatorioController implements Serializable {
 		
 		entitymanager.getTransaction().begin();
 		
-		List<CompraEstoque> l = ceDAO.listar();
+		List<CompraEstoque> l = ceDAO.listarPorPeriodo( this.dataInicial, this.dataFinal );
 		
 		this.listaCompra.clear();
 		
 		entitymanager.getTransaction().commit();
 			
 		for (CompraEstoque ce : l) {
+			
 			this.listaCompra.add(ce);
 		}
+		entitymanager.close();
 		
 		return "";
 	}

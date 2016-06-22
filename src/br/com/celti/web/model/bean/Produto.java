@@ -27,7 +27,7 @@ public class Produto {
 	private float valor;
 	private int qtde;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fornecedor_cnpj")
 	@ForeignKey(name="cnpj")
 	private Fornecedor fornecedor;

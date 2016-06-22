@@ -29,7 +29,7 @@ public class Funcionario {
 	private String endereco;
 	private String contato;
 		
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tipo_funcionario_idtipo_funcionario")
 	@ForeignKey(name="idtipo_funcionario")
     private TipoFuncionario tipoFuncionario;
