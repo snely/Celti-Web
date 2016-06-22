@@ -11,7 +11,55 @@
 	<h:body>
         <ui:include src="header.xhtml" />
 		
-		
+		<h:panelGrid>
+			<f:facet name="header">
+				<h:outputText value="Selecione a data inicial: " styleClass="title" />
+				<h:inputText id="dataI" value="#{relatorioController.dataInicial}" styleClass="field"></h:inputText>
+				<h:outputText value="Selecione a data final: " styleClass="title" />
+				<h:inputText id="dataF" value="#{relatorioController.dataFinal}" styleClass="field"></h:inputText>
+				<h:form>
+					<h:commandButton value="Gerar" action="#{relatorioController.mostrarRelatorio}" />
+				</h:form>
+			</f:facet>
+			
+			<h:form>
+			<h:dataTable border="1" value="#{relatorioController.listaCompra}" var="compra">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText  value="Data"/>
+					</f:facet>
+     				<h:outputText value="#{compra.data}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText  value="Produto"/>
+					</f:facet>
+     				<h:outputText value="#{compra.produto.nome}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText  value="Quantidade"/>
+					</f:facet>
+     				<h:outputText value="#{compra.qtde}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText  value="Funcionario"/>
+					</f:facet>
+     				<h:outputText value="#{compra.funcionario.nome}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText  value="Valor"/>
+					</f:facet>
+     				<h:outputText value="#{compra.produto.valor}"/>
+				</h:column>
+				
+			
+			</h:dataTable>
+			</h:form>
+			
+		</h:panelGrid>
 	
 	
 	</h:body>

@@ -32,10 +32,10 @@ public class CompraEstoqueDAOTest {
 		Produto p = new Produto();
 
 		f.setId(new Long(1));
-		p.setId(new Long(1));
+		p.setId(new Long(3));
 		
 		ce.setData(new Date());
-		ce.setQtde(2);
+		ce.setQtde(15);
 		ce.setFuncionario(f);
 		ce.setProduto(p);
 		

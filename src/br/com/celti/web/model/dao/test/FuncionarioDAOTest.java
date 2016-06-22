@@ -10,7 +10,7 @@ import br.com.celti.web.model.dao.FuncionarioDAO;
 import br.com.celti.web.model.dao.JPAUtil;
 
 public class FuncionarioDAOTest {
-/*
+
 	@Test
 	public void testCadastrar() {
 
@@ -38,7 +38,7 @@ public class FuncionarioDAOTest {
 		entitymanager.close();
 		
 	}
-	*/
+	
 	@Test 
 	public void testValidar(){
 		

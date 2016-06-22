@@ -25,11 +25,11 @@ public class ProdutoDAOTest {
 		Produto p = new Produto();
 		Fornecedor f = new Fornecedor();
 				
-		f.setCnpj("123");
+		f.setCnpj("1234");
 		
-		p.setNome("ACER Aspire");
-		p.setQtde(2);
-		p.setValor(4100.3f);
+		p.setNome("DELL Computer");
+		p.setQtde(50);
+		p.setValor(2500.3f);
 		p.setFornecedor(f);
 		
 		pDAO.cadastrar(p);
