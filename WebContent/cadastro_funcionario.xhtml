@@ -19,38 +19,38 @@
 		</f:facet>
 
 		<h:form>
-			<h:outputText value="Nome Completo" styleClass="label" />
+			<h:outputText value="Nome " styleClass="label" />
 			<br />
-			<h:inputText id="login" value="#{loginController.login}"
+			<h:inputText id="nome" value="#{cadastroFuncionarioController.nome}"
 				styleClass="field"></h:inputText>
-			<h:message for="login"></h:message>
+			<h:message for="nome"></h:message>
 			<br />
 			<h:outputText value="Endereco" styleClass="label" />
 			<br />
-			<h:inputSecret id="senha" value="#{loginController.senha}"
-				styleClass="field"></h:inputSecret>
+			<h:inputText id="endereco" value="#{cadastroFuncionarioController.endereco}"
+				styleClass="field"></h:inputText>
+			<h:message for="endereco"></h:message>
+			<br />
+			<h:outputText value="Contato" styleClass="label" />
+			<br />
+			<h:inputText id="contato" value="#{cadastroFuncionarioController.contato}"
+				styleClass="field"></h:inputText>
+			<h:message for="contato"></h:message>
+			<br />
+			<h:outputText value="login" styleClass="label" />
+			<br />
+			<h:inputText id="login" value="#{cadastroFuncionarioController.login}"
+				styleClass="field"></h:inputText>
+			<h:message for="login"></h:message>
+			<br />
+			<h:outputText value="Senha" styleClass="label" />
+			<br />
+			<h:inputText id="senha" value="#{cadastroFuncionarioController.senha}"
+				styleClass="field"></h:inputText>
 			<h:message for="senha"></h:message>
 			<br />
-			<h:outputText value="CPF" styleClass="label" />
-			<br />
-			<h:inputSecret id="senha" value="#{loginController.senha}"
-				styleClass="field"></h:inputSecret>
-			<h:message for="senha"></h:message>
-			<br />
-			<h:outputText value="E-mail" styleClass="label" />
-			<br />
-			<h:inputSecret id="senha" value="#{loginController.senha}"
-				styleClass="field"></h:inputSecret>
-			<h:message for="senha"></h:message>
-			<br />
-			<h:outputText value="Cargo" styleClass="label" />
-			<br />
-			<h:inputSecret id="senha" value="#{loginController.senha}"
-				styleClass="field"></h:inputSecret>
-			<h:message for="senha"></h:message>
-			<br />
-			<h:commandButton action="#{loginController.validarLogin}"
-				value="Login" styleClass="sendButton"></h:commandButton>
+			<h:commandButton action="#{cadastroFuncionarioController.cadastrar}"
+				value="Cadastrar" styleClass="sendButton"></h:commandButton>
 		</h:form>
 	</h:panelGrid>
 
