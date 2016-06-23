@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>.::Acesso Celti Web::.</title>
+	<h:outputStylesheet name="index.css" library="css" />
+</h:head>
+<h:body>
+
+	<h:panelGrid id="content">
+		<f:facet name="header">
+			<h:graphicImage library="images" name="logo.png" styleClass="logo" />
+			<br />
+			<h:outputText value="Celti - Controle de Estoque Loja de TI"
+				styleClass="title" />
+		</f:facet>
+
+		<h:form>
+			<h:outputText value="Nome" styleClass="label" />
+			<br />
+			<h:inputText id="nome" value="#{cadastroFornecedorController.nome}"
+				styleClass="field"></h:inputText>
+			<h:message for="nome"></h:message>
+			<br />
+			<h:outputText value="Endereco" styleClass="label" />
+			<br />
+			<h:inputText id="endereco" value="#{cadastroFornecedorController.endereco}"
+				styleClass="field"></h:inputText>
+			<h:message for="endereco"></h:message>
+			<br />
+			<h:outputText value="CNPJ" styleClass="label" />
+			<br />
+			<h:inputText id="cnpj" value="#{cadastroFornecedorController.cnpj}"
+				styleClass="field"></h:inputText>
+			<h:message for="cnpj"></h:message>
+			<br />
+			<h:outputText value="Contato" styleClass="label" />
+			<br />
+			<h:inputText id="contato" value="#{cadastroFornecedorController.contato}"
+				styleClass="field"></h:inputText>
+			<h:message for="contato"></h:message>
+			<br />
+			
+			<h:commandButton action="#{cadastroFornecedorController.cadastrarFornecedor}"
+				value="Login" styleClass="sendButton"></h:commandButton>
+		</h:form>
+	</h:panelGrid>
+
+</h:body>
+</html>
