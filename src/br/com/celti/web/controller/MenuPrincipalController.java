@@ -23,6 +23,28 @@ public class MenuPrincipalController implements Serializable {
 		
 		return "";
 	}
+
+	public String abrirTelaCadastroFuncionario() {
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("cadastro_funcionario.xhtml");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return "";
+	}
+	
+	public String abrirTelaCadastroFornecedor() {
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("cadastro_fornecedor.xhtml");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return "";
+	}
 	
 	public String abrirPrincipal() {
 		try {
