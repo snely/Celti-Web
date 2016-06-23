@@ -19,37 +19,27 @@
 		</f:facet>
 
 		<h:form>
-			<h:outputText value="Nome Produto" styleClass="label" />
+			<h:outputText value="Nome" styleClass="label" />
 			<br />
-			<h:inputText id="login" value="#{loginController.login}"
+			<h:inputText id="nome" value="#{cadastroProdutoController.nome}"
 				styleClass="field"></h:inputText>
-			<h:message for="login"></h:message>
+			<h:message for="nome"></h:message>
 			<br />
-			<h:outputText value="Material" styleClass="label" />
+			<h:outputText value="Preco" styleClass="label" />
 			<br />
-			<h:inputSecret id="senha" value="#{loginController.senha}"
-				styleClass="field"></h:inputSecret>
-			<h:message for="senha"></h:message>
+			<h:inputText id="preco" value="#{cadastroProdutoController.preco}"
+				styleClass="field"></h:inputText>
+			<h:message for="preco"></h:message>
 			<br />
-			<h:outputText value="Descrição" styleClass="label" />
+			<h:outputText value="Quantidade" styleClass="label" />
 			<br />
-			<h:inputSecret id="senha" value="#{loginController.senha}"
-				styleClass="field"></h:inputSecret>
-			<h:message for="senha"></h:message>
+			<h:inputText id="quantidade" value="#{cadastroProdutoController.quantidade}"
+				styleClass="field"></h:inputText>
+			<h:message for="quantidade"></h:message>
 			<br />
-			<h:outputText value="Código de Barra" styleClass="label" />
-			<br />
-			<h:inputSecret id="senha" value="#{loginController.senha}"
-				styleClass="field"></h:inputSecret>
-			<h:message for="senha"></h:message>
-			<br />
-			<h:outputText value="Localização" styleClass="label" />
-			<br />
-			<h:inputSecret id="senha" value="#{loginController.senha}"
-				styleClass="field"></h:inputSecret>
-			<h:message for="senha"></h:message>
-			<br />
-			<h:commandButton action="#{loginController.validarLogin}"
+			
+			
+			<h:commandButton action="#{cadastroProdutoController.cadastrarProduto}"
 				value="Login" styleClass="sendButton"></h:commandButton>
 		</h:form>
 	</h:panelGrid>
